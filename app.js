@@ -1,7 +1,7 @@
 const server = require('express')();
 const bodyParser = require('body-parser');
 const cors = require("cors")
-const port = 8080 || event;
+const port = process.env.PORT || 8080;
 
 // local in-memory data
 const dexdata = require("./data/dex.json")
