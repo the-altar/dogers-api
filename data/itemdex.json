@@ -1,0 +1,927 @@
+{
+    "aguavberry": {
+        "name": "Aguav Berry",
+        "effect": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+        "slug": "aguavberry"
+    },
+    "apicotberry": {
+        "name": "Apicot Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its Sp. Def stat will increase when it's in a pinch.",
+        "slug": "apicotberry"
+    },
+    "aspearberry": {
+        "name": "Aspear Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+        "slug": "aspearberry"
+    },
+    "babiriberry": {
+        "name": "Babiri Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Steel-type attack.",
+        "slug": "babiriberry"
+    },
+    "chartiberry": {
+        "name": "Charti Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Rock-type attack.",
+        "slug": "chartiberry"
+    },
+    "cheriberry": {
+        "name": "Cheri Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+        "slug": "cheriberry"
+    },
+    "chestoberry": {
+        "name": "Chesto Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+        "slug": "chestoberry"
+    },
+    "chilanberry": {
+        "name": "Chilan Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one Normal-type attack.",
+        "slug": "chilanberry"
+    },
+    "chopleberry": {
+        "name": "Chople Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Fighting-type attack.",
+        "slug": "chopleberry"
+    },
+    "cobaberry": {
+        "name": "Coba Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Flying-type attack.",
+        "slug": "cobaberry"
+    },
+    "colburberry": {
+        "name": "Colbur Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Dark-type attack.",
+        "slug": "colburberry"
+    },
+    "figyberry": {
+        "name": "Figy Berry",
+        "effect": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+        "slug": "figyberry"
+    },
+    "ganlonberry": {
+        "name": "Ganlon Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its Defense stat will increase when it's in a pinch.",
+        "slug": "ganlonberry"
+    },
+    "grepaberry": {
+        "name": "Grepa Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Sp. Def base points.",
+        "slug": "grepaberry"
+    },
+    "habanberry": {
+        "name": "Haban Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Dragon-type attack.",
+        "slug": "habanberry"
+    },
+    "hondewberry": {
+        "name": "Hondew Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Sp. Atk base points.",
+        "slug": "hondewberry"
+    },
+    "iapapaberry": {
+        "name": "Iapapa Berry",
+        "effect": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+        "slug": "iapapaberry"
+    },
+    "kasibberry": {
+        "name": "Kasib Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Ghost-type attack.",
+        "slug": "kasibberry"
+    },
+    "kebiaberry": {
+        "name": "Kebia Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Poison-type attack.",
+        "slug": "kebiaberry"
+    },
+    "keeberry": {
+        "name": "Kee Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will increase the holder's Defense if it's hit with a physical move.",
+        "slug": "keeberry"
+    },
+    "kelpsyberry": {
+        "name": "Kelpsy Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Attack base points.",
+        "slug": "kelpsyberry"
+    },
+    "lansatberry": {
+        "name": "Lansat Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its critical-hit ratio will increase when it's in a pinch.",
+        "slug": "lansatberry"
+    },
+    "leppaberry": {
+        "name": "Leppa Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+        "slug": "leppaberry"
+    },
+    "liechiberry": {
+        "name": "Liechi Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its Attack stat will increase when it's in a pinch.",
+        "slug": "liechiberry"
+    },
+    "lumberry": {
+        "name": "Lum Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+        "slug": "lumberry"
+    },
+    "magoberry": {
+        "name": "Mago Berry",
+        "effect": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+        "slug": "magoberry"
+    },
+    "marangaberry": {
+        "name": "Maranga Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will increase the holder's Sp. Def if it's hit with a special move.",
+        "slug": "marangaberry"
+    },
+    "occaberry": {
+        "name": "Occa Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Fire-type attack.",
+        "slug": "occaberry"
+    },
+    "oranberry": {
+        "name": "Oran Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+        "slug": "oranberry"
+    },
+    "passhoberry": {
+        "name": "Passho Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Water-type attack.",
+        "slug": "passhoberry"
+    },
+    "payapaberry": {
+        "name": "Payapa Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Psychic-type attack.",
+        "slug": "payapaberry"
+    },
+    "pechaberry": {
+        "name": "Pecha Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from poisoning on its own in battle.",
+        "slug": "pechaberry"
+    },
+    "persimberry": {
+        "name": "Persim Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+        "slug": "persimberry"
+    },
+    "petayaberry": {
+        "name": "Petaya Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its Sp. Atk stat will increase when it's in a pinch.",
+        "slug": "petayaberry"
+    },
+    "pomegberry": {
+        "name": "Pomeg Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its HP base points.",
+        "slug": "pomegberry"
+    },
+    "qualotberry": {
+        "name": "Qualot Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Defense base points.",
+        "slug": "qualotberry"
+    },
+    "rawstberry": {
+        "name": "Rawst Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+        "slug": "rawstberry"
+    },
+    "rindoberry": {
+        "name": "Rindo Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Grass-type attack.",
+        "slug": "rindoberry"
+    },
+    "roseliberry": {
+        "name": "Roseli Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Fairy-type attack.",
+        "slug": "roseliberry"
+    },
+    "salacberry": {
+        "name": "Salac Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its Speed stat will increase when it's in a pinch.",
+        "slug": "salacberry"
+    },
+    "shucaberry": {
+        "name": "Shuca Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Ground-type attack.",
+        "slug": "shucaberry"
+    },
+    "sitrusberry": {
+        "name": "Sitrus Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+        "slug": "sitrusberry"
+    },
+    "starfberry": {
+        "name": "Starf Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, one of its stats will sharply increase when it's in a pinch.",
+        "slug": "starfberry"
+    },
+    "tamatoberry": {
+        "name": "Tamato Berry",
+        "effect": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Speed base points.",
+        "slug": "tamatoberry"
+    },
+    "tangaberry": {
+        "name": "Tanga Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Bug-type attack.",
+        "slug": "tangaberry"
+    },
+    "wacanberry": {
+        "name": "Wacan Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Electric-type attack.",
+        "slug": "wacanberry"
+    },
+    "wikiberry": {
+        "name": "Wiki Berry",
+        "effect": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+        "slug": "wikiberry"
+    },
+    "yacheberry": {
+        "name": "Yache Berry",
+        "effect": "If held by a Pok\u00e9mon, this Berry will lessen the damage taken from one supereffective Ice-type attack.",
+        "slug": "yacheberry"
+    },
+    "absorbbulb": {
+        "name": "Absorb Bulb",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Sp. Atk if the holder is hit with a Water-type attack. It can only be used once.",
+        "slug": "absorbbulb"
+    },
+    "airballoon": {
+        "name": "Air Balloon",
+        "effect": "An item to be held by a Pok\u00e9mon. The holder will float in the air until hit. Once the holder is hit, this item will burst.",
+        "slug": "airballoon"
+    },
+    "amuletcoin": {
+        "name": "Amulet Coin",
+        "effect": "An item to be held by a Pok\u00e9mon. It doubles any prize money received if the holding Pok\u00e9mon joins a battle.",
+        "slug": "amuletcoin"
+    },
+    "assaultvest": {
+        "name": "Assault Vest",
+        "effect": "An item to be held by a Pok\u00e9mon. This offensive vest raises Sp. Def but prevents the use of status moves.",
+        "slug": "assaultvest"
+    },
+    "berrysweet": {
+        "name": "Berry Sweet",
+        "effect": "A berry-shaped sweet. When a Milcery holds this, it spins around happily.",
+        "slug": "berrysweet"
+    },
+    "bigroot": {
+        "name": "Big Root",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts the amount of HP the holder restores from HP-stealing moves.",
+        "slug": "bigroot"
+    },
+    "bindingband": {
+        "name": "Binding Band",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a band that increases the power of binding moves used by the holder.",
+        "slug": "bindingband"
+    },
+    "blackbelt": {
+        "name": "Black Belt",
+        "effect": "An item to be held by a Pok\u00e9mon. This belt helps the wearer to focus and boosts the power of Fighting-type moves.",
+        "slug": "blackbelt"
+    },
+    "blackglasses": {
+        "name": "Black Glasses",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a pair of shady-looking glasses that boost the power of Dark-type moves.",
+        "slug": "blackglasses"
+    },
+    "blacksludge": {
+        "name": "Black Sludge",
+        "effect": "An item to be held by a Pok\u00e9mon. It gradually restores HP to Poison-type Pok\u00e9mon. It damages any other type.",
+        "slug": "blacksludge"
+    },
+    "blunderpolicy": {
+        "name": "Blunder Policy",
+        "effect": "Raises Speed sharply when a Pok\u00e9mon misses with a move because of accuracy.",
+        "slug": "blunderpolicy"
+    },
+    "brightpowder": {
+        "name": "BrightPowder",
+        "effect": "An item to be held by a Pok\u00e9mon. It casts a tricky glare that lowers the opposing Pok\u00e9mon's accuracy.",
+        "slug": "brightpowder"
+    },
+    "bugmemory": {
+        "name": "Bug Memory",
+        "effect": "A memory disc that contains Bug-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "bugmemory"
+    },
+    "cellbattery": {
+        "name": "Cell Battery",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Attack if the holder is hit with an Electric-type attack. It can only be used once.",
+        "slug": "cellbattery"
+    },
+    "charcoal": {
+        "name": "Charcoal",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a combustible fuel that boosts the power of Fire-type moves.",
+        "slug": "charcoal"
+    },
+    "choiceband": {
+        "name": "Choice Band",
+        "effect": "An item to be held by a Pok\u00e9mon. This curious headband boosts Attack but only allows the use of one move.",
+        "slug": "choiceband"
+    },
+    "choicescarf": {
+        "name": "Choice Scarf",
+        "effect": "An item to be held by a Pok\u00e9mon. This curious scarf boosts Speed but only allows the use of one move.",
+        "slug": "choicescarf"
+    },
+    "choicespecs": {
+        "name": "Choice Specs",
+        "effect": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move.",
+        "slug": "choicespecs"
+    },
+    "cleansetag": {
+        "name": "Cleanse Tag",
+        "effect": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
+        "slug": "cleansetag"
+    },
+    "cloversweet": {
+        "name": "Clover Sweet",
+        "effect": "A clover-shaped sweet. When a Milcery holds this, it spins around happily.",
+        "slug": "cloversweet"
+    },
+    "damprock": {
+        "name": "Damp Rock",
+        "effect": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
+        "slug": "damprock"
+    },
+    "darkmemory": {
+        "name": "Dark Memory",
+        "effect": "A memory disc that contains Dark-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "darkmemory"
+    },
+    "destinyknot": {
+        "name": "Destiny Knot",
+        "effect": "An item to be held by a Pok\u00e9mon. If the holder becomes infatuated, the opposing Pok\u00e9mon will be, too.",
+        "slug": "destinyknot"
+    },
+    "dragonfang": {
+        "name": "Dragon Fang",
+        "effect": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves.",
+        "slug": "dragonfang"
+    },
+    "dragonmemory": {
+        "name": "Dragon Memory",
+        "effect": "A memory disc that contains Dragon-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "dragonmemory"
+    },
+    "ejectbutton": {
+        "name": "Eject Button",
+        "effect": "An item to be held by a Pok\u00e9mon. If the holder is hit by an attack, it will be switched out of battle.",
+        "slug": "ejectbutton"
+    },
+    "ejectpack": {
+        "name": "Eject Pack",
+        "effect": "An item to be held by a Pok\u00e9mon. When the holder's stats are lowered, it will be switched out of battle.",
+        "slug": "ejectpack"
+    },
+    "electricmemory": {
+        "name": "Electric Memory",
+        "effect": "A memory disc that contains Electric-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "electricmemory"
+    },
+    "electricseed": {
+        "name": "Electric Seed",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Defense on Electric Terrain. It can only be used once.",
+        "slug": "electricseed"
+    },
+    "everstone": {
+        "name": "Everstone",
+        "effect": "An item to be held by a Pok\u00e9mon. A Pok\u00e9mon holding this peculiar stone is prevented from evolving.",
+        "slug": "everstone"
+    },
+    "eviolite": {
+        "name": "Eviolite",
+        "effect": "A mysterious evolutionary lump. When held by a Pok\u00e9mon that can still evolve, it raises both Defense and Sp. Def.",
+        "slug": "eviolite"
+    },
+    "expertbelt": {
+        "name": "Expert Belt",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a well-worn belt that slightly boosts the power of supereffective moves.",
+        "slug": "expertbelt"
+    },
+    "fairymemory": {
+        "name": "Fairy Memory",
+        "effect": "A memory disc that contains Fairy-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "fairymemory"
+    },
+    "fightingmemory": {
+        "name": "Fighting Memory",
+        "effect": "A memory disc that contains Fighting-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "fightingmemory"
+    },
+    "firememory": {
+        "name": "Fire Memory",
+        "effect": "A memory disc that contains Fire-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "firememory"
+    },
+    "flameorb": {
+        "name": "Flame Orb",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will afflict the holder with a burn during battle.",
+        "slug": "flameorb"
+    },
+    "floatstone": {
+        "name": "Float Stone",
+        "effect": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of a Pok\u00e9mon when held.",
+        "slug": "floatstone"
+    },
+    "flowersweet": {
+        "name": "Flower Sweet",
+        "effect": "A flower-shaped sweet. When a Milcery holds this, it spins around happily.",
+        "slug": "flowersweet"
+    },
+    "flyingmemory": {
+        "name": "Flying Memory",
+        "effect": "A memory disc that contains Flying-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "flyingmemory"
+    },
+    "focusband": {
+        "name": "Focus Band",
+        "effect": "An item to be held by a Pok\u00e9mon. The holder may endure a potential KO attack, leaving it with just 1 HP.",
+        "slug": "focusband"
+    },
+    "focussash": {
+        "name": "Focus Sash",
+        "effect": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
+        "slug": "focussash"
+    },
+    "fullincense": {
+        "name": "Full Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. This exotic-smelling incense makes the holder bloated and slow moving.",
+        "slug": "fullincense"
+    },
+    "ghostmemory": {
+        "name": "Ghost Memory",
+        "effect": "A memory disc that contains Ghost-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "ghostmemory"
+    },
+    "grassmemory": {
+        "name": "Grass Memory",
+        "effect": "A memory disc that contains Grass-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "grassmemory"
+    },
+    "grassyseed": {
+        "name": "Grassy Seed",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Defense on Grassy Terrain. It can only be used once.",
+        "slug": "grassyseed"
+    },
+    "gripclaw": {
+        "name": "Grip Claw",
+        "effect": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap.",
+        "slug": "gripclaw"
+    },
+    "groundmemory": {
+        "name": "Ground Memory",
+        "effect": "A memory disc that contains Ground-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "groundmemory"
+    },
+    "hardstone": {
+        "name": "Hard Stone",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves.",
+        "slug": "hardstone"
+    },
+    "heatrock": {
+        "name": "Heat Rock",
+        "effect": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
+        "slug": "heatrock"
+    },
+    "heavydutyboots": {
+        "name": "Heavy-Duty Boots",
+        "effect": "These boots prevent the effects of traps set on the battlefield.",
+        "slug": "heavydutyboots"
+    },
+    "icememory": {
+        "name": "Ice Memory",
+        "effect": "A memory disc that contains Ice-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "icememory"
+    },
+    "icyrock": {
+        "name": "Icy Rock",
+        "effect": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Hail when used by the holder.",
+        "slug": "icyrock"
+    },
+    "ironball": {
+        "name": "Iron Ball",
+        "effect": "An item to be held by a Pok\u00e9mon. It lowers Speed and allows Ground-type moves to hit Flying types and holders that are levitating.",
+        "slug": "ironball"
+    },
+    "kingsrock": {
+        "name": "King's Rock",
+        "effect": "An item to be held by a Pok\u00e9mon. When the holder successfully inflicts damage, the target may also flinch.",
+        "slug": "kingsrock"
+    },
+    "laggingtail": {
+        "name": "Lagging Tail",
+        "effect": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual.",
+        "slug": "laggingtail"
+    },
+    "laxincense": {
+        "name": "Lax Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder.",
+        "slug": "laxincense"
+    },
+    "leek": {
+        "name": "Leek",
+        "effect": "An item to be held by Farfetch'd. This very long and stiff stalk of leek boosts its critical-hit ratio.",
+        "slug": "leek"
+    },
+    "leftovers": {
+        "name": "Leftovers",
+        "effect": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle.",
+        "slug": "leftovers"
+    },
+    "lifeorb": {
+        "name": "Life Orb",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts the power of moves but at the cost of some HP on each hit.",
+        "slug": "lifeorb"
+    },
+    "lightball": {
+        "name": "Light Ball",
+        "effect": "An item to be held by Pikachu. It's a puzzling orb that boosts its Attack and Sp. Atk stats.",
+        "slug": "lightball"
+    },
+    "lightclay": {
+        "name": "Light Clay",
+        "effect": "An item to be held by a Pok\u00e9mon. Protective moves like Light Screen and Reflect will be effective longer.",
+        "slug": "lightclay"
+    },
+    "lovesweet": {
+        "name": "Love Sweet",
+        "effect": "A heart-shaped sweet. When a Milcery holds this, it spins around happily.",
+        "slug": "lovesweet"
+    },
+    "luckincense": {
+        "name": "Luck Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. It doubles any prize money received if the holding Pok\u00e9mon joins a battle.",
+        "slug": "luckincense"
+    },
+    "luckyegg": {
+        "name": "Lucky Egg",
+        "effect": "An item to be held by a Pok\u00e9mon. It's an egg filled with happiness that earns the holder extra Exp. Points in battle.",
+        "slug": "luckyegg"
+    },
+    "luminousmoss": {
+        "name": "Luminous Moss",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Sp. Def if the holder is hit with a Water-type attack. It can only be used once.",
+        "slug": "luminousmoss"
+    },
+    "machobrace": {
+        "name": "Macho Brace",
+        "effect": "An item to be held by a Pok\u00e9mon. This stiff, heavy brace helps Pok\u00e9mon grow strong but cuts Speed in battle.",
+        "slug": "machobrace"
+    },
+    "magnet": {
+        "name": "Magnet",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a powerful magnet that boosts the power of Electric-type moves.",
+        "slug": "magnet"
+    },
+    "mentalherb": {
+        "name": "Mental Herb",
+        "effect": "An item to be held by a Pok\u00e9mon. The holder shakes off move-binding effects to move freely. It can be used only once.",
+        "slug": "mentalherb"
+    },
+    "metalcoat": {
+        "name": "Metal Coat",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves.",
+        "slug": "metalcoat"
+    },
+    "metalpowder": {
+        "name": "Metal Powder",
+        "effect": "An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts the Defense stat.",
+        "slug": "metalpowder"
+    },
+    "metronome": {
+        "name": "Metronome",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively but only until a different move is used.",
+        "slug": "metronome"
+    },
+    "miracleseed": {
+        "name": "Miracle Seed",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a seed imbued with life-force that boosts the power of Grass-type moves.",
+        "slug": "miracleseed"
+    },
+    "mistyseed": {
+        "name": "Misty Seed",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Sp. Def on Misty Terrain. It can only be used once.",
+        "slug": "mistyseed"
+    },
+    "muscleband": {
+        "name": "Muscle Band",
+        "effect": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves.",
+        "slug": "muscleband"
+    },
+    "mysticwater": {
+        "name": "Mystic Water",
+        "effect": "An item to be held by a Pok\u00e9mon. This teardrop-shaped gem boosts the power of Water-type moves.",
+        "slug": "mysticwater"
+    },
+    "nevermeltice": {
+        "name": "Never-Melt Ice",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a heat- repelling piece of ice that boosts the power of Ice-type moves.",
+        "slug": "nevermeltice"
+    },
+    "normalgem": {
+        "name": "Normal Gem",
+        "effect": "A gem with an ordinary essence. When held, it strengthens the power of a Normal-type move one time.",
+        "slug": "normalgem"
+    },
+    "oddincense": {
+        "name": "Odd Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. This exotic-smelling incense boosts the power of Psychic-type moves.",
+        "slug": "oddincense"
+    },
+    "pixieplate": {
+        "name": "Pixie Plate",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves.",
+        "slug": "pixieplate"
+    },
+    "poisonbarb": {
+        "name": "Poison Barb",
+        "effect": "An item to be held by a Pok\u00e9mon. This small, poisonous barb boosts the power of Poison-type moves.",
+        "slug": "poisonbarb"
+    },
+    "poisonmemory": {
+        "name": "Poison Memory",
+        "effect": "A memory disc that contains Poison-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "poisonmemory"
+    },
+    "poweranklet": {
+        "name": "Power Anklet",
+        "effect": "An item to be held by a Pok\u00e9mon. It reduces Speed but allows the holder's Speed stat to grow more after battling.",
+        "slug": "poweranklet"
+    },
+    "powerband": {
+        "name": "Power Band",
+        "effect": "An item to be held by a Pok\u00e9mon. It reduces Speed but allows the holder's Sp. Def stat to grow more after battling.",
+        "slug": "powerband"
+    },
+    "powerbelt": {
+        "name": "Power Belt",
+        "effect": "An item to be held by a Pok\u00e9mon. It reduces Speed but allows the holder's Defense stat to grow more after battling.",
+        "slug": "powerbelt"
+    },
+    "powerbracer": {
+        "name": "Power Bracer",
+        "effect": "An item to be held by a Pok\u00e9mon. It reduces Speed but allows the holder's Attack stat to grow more after battling.",
+        "slug": "powerbracer"
+    },
+    "powerherb": {
+        "name": "Power Herb",
+        "effect": "A single-use item to be held by a Pok\u00e9mon. It allows the holder to immediately use a move that normally requires a turn to charge.",
+        "slug": "powerherb"
+    },
+    "powerlens": {
+        "name": "Power Lens",
+        "effect": "An item to be held by a Pok\u00e9mon. It reduces Speed but allows the holder's Sp. Atk stat to grow more after battling.",
+        "slug": "powerlens"
+    },
+    "powerweight": {
+        "name": "Power Weight",
+        "effect": "An item to be held by a Pok\u00e9mon. It reduces Speed but allows the holder's max HP to grow more after battling.",
+        "slug": "powerweight"
+    },
+    "protectivepads": {
+        "name": "Protective Pads",
+        "effect": "An item to be held by a Pok\u00e9mon. These pads protect the holder from effects caused by making direct contact with the target.",
+        "slug": "protectivepads"
+    },
+    "protector": {
+        "name": "Protector",
+        "effect": "A protective item of some sort. It is extremely stiff and heavy. It's loved by a certain Pok\u00e9mon.",
+        "slug": "protector"
+    },
+    "psychicmemory": {
+        "name": "Psychic Memory",
+        "effect": "A memory disc that contains Psychic-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "psychicmemory"
+    },
+    "psychicseed": {
+        "name": "Psychic Seed",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Sp. Def on Psychic Terrain. It can only be used once.",
+        "slug": "psychicseed"
+    },
+    "pureincense": {
+        "name": "Pure Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
+        "slug": "pureincense"
+    },
+    "quickclaw": {
+        "name": "Quick Claw",
+        "effect": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
+        "slug": "quickclaw"
+    },
+    "quickpowder": {
+        "name": "Quick Powder",
+        "effect": "An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts the Speed stat.",
+        "slug": "quickpowder"
+    },
+    "razorclaw": {
+        "name": "Razor Claw",
+        "effect": "An item to be held by a Pok\u00e9mon. This sharply hooked claw increases the holder's critical-hit ratio.",
+        "slug": "razorclaw"
+    },
+    "reapercloth": {
+        "name": "Reaper Cloth",
+        "effect": "A cloth imbued with horrifyingly strong spiritual energy. It's loved by a certain Pok\u00e9mon.",
+        "slug": "reapercloth"
+    },
+    "redcard": {
+        "name": "Red Card",
+        "effect": "An item to be held by a Pok\u00e9mon. When the holder is hit by an attack, the attacker is removed from battle.",
+        "slug": "redcard"
+    },
+    "ribbonsweet": {
+        "name": "Ribbon Sweet",
+        "effect": "A ribbon-shaped sweet. When a Milcery holds this, it spins around happily.",
+        "slug": "ribbonsweet"
+    },
+    "ringtarget": {
+        "name": "Ring Target",
+        "effect": "An item to be held by a Pok\u00e9mon. Moves that normally have no effect will land on a Pok\u00e9mon holding it.",
+        "slug": "ringtarget"
+    },
+    "rockincense": {
+        "name": "Rock Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. This exotic-smelling incense boosts the power of Rock-type moves.",
+        "slug": "rockincense"
+    },
+    "rockmemory": {
+        "name": "Rock Memory",
+        "effect": "A memory disc that contains Rock-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "rockmemory"
+    },
+    "rockyhelmet": {
+        "name": "Rocky Helmet",
+        "effect": "An item to be held by a Pok\u00e9mon. If the holder is hit, the attacker will also be damaged upon contact.",
+        "slug": "rockyhelmet"
+    },
+    "roomservice": {
+        "name": "Room Service",
+        "effect": "An item to be held by a Pok\u00e9mon. Lowers Speed when Trick Room takes effect.",
+        "slug": "roomservice"
+    },
+    "roseincense": {
+        "name": "Rose Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. This exotic-smelling incense boosts the power of Grass-type moves.",
+        "slug": "roseincense"
+    },
+    "rustedshield": {
+        "name": "Rusted Shield",
+        "effect": "It is said that a hero used this shield to halt a terrible disaster in ancient times. But it's grown rusty and worn.",
+        "slug": "rustedshield"
+    },
+    "rustedsword": {
+        "name": "Rusted Sword",
+        "effect": "It is said that a hero used this sword to halt a terrible disaster in ancient times. But it's grown rusty and worn.",
+        "slug": "rustedsword"
+    },
+    "safetygoggles": {
+        "name": "Safety Goggles",
+        "effect": "An item to be held by a Pok\u00e9mon. These goggles protect the holder from both weather-related damage and powder.",
+        "slug": "safetygoggles"
+    },
+    "scopelens": {
+        "name": "Scope Lens",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio.",
+        "slug": "scopelens"
+    },
+    "seaincense": {
+        "name": "Sea Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. This incense has a curious aroma that boosts the power of Water-type moves.",
+        "slug": "seaincense"
+    },
+    "sharpbeak": {
+        "name": "Sharp Beak",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves.",
+        "slug": "sharpbeak"
+    },
+    "shedshell": {
+        "name": "Shed Shell",
+        "effect": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail.",
+        "slug": "shedshell"
+    },
+    "shellbell": {
+        "name": "Shell Bell",
+        "effect": "An item to be held by a Pok\u00e9mon. The holder restores a little HP every time it inflicts damage on others.",
+        "slug": "shellbell"
+    },
+    "silkscarf": {
+        "name": "Silk Scarf",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves.",
+        "slug": "silkscarf"
+    },
+    "silverpowder": {
+        "name": "SilverPowder",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a shiny silver powder that will boost the power of Bug-type moves.",
+        "slug": "silverpowder"
+    },
+    "smokeball": {
+        "name": "Smoke Ball",
+        "effect": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail.",
+        "slug": "smokeball"
+    },
+    "smoothrock": {
+        "name": "Smooth Rock",
+        "effect": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder.",
+        "slug": "smoothrock"
+    },
+    "snowball": {
+        "name": "Snowball",
+        "effect": "An item to be held by a Pok\u00e9mon. It boosts Attack if the holder is hit with an Ice-type attack. It can only be used once.",
+        "slug": "snowball"
+    },
+    "softsand": {
+        "name": "Soft Sand",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves.",
+        "slug": "softsand"
+    },
+    "soothebell": {
+        "name": "Soothe Bell",
+        "effect": "An item to be held by a Pok\u00e9mon. The comforting chime of this bell calms the holder, making it friendly.",
+        "slug": "soothebell"
+    },
+    "spelltag": {
+        "name": "Spell Tag",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves.",
+        "slug": "spelltag"
+    },
+    "starsweet": {
+        "name": "Star Sweet",
+        "effect": "A star-shaped sweet. When a Milcery holds this, it spins around happily.",
+        "slug": "starsweet"
+    },
+    "steelmemory": {
+        "name": "Steel Memory",
+        "effect": "A memory disc that contains Steel-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "steelmemory"
+    },
+    "stickybarb": {
+        "name": "Sticky Barb",
+        "effect": "An item to be held by a Pok\u00e9mon. It damages the holder every turn and may latch on to Pok\u00e9mon that touch the holder.",
+        "slug": "stickybarb"
+    },
+    "strawberrysweet": {
+        "name": "Strawberry Sweet",
+        "effect": "A strawberry-shaped sweet. When a Milcery holds this, it will spin around happily.",
+        "slug": "strawberrysweet"
+    },
+    "terrainextender": {
+        "name": "Terrain Extender",
+        "effect": "An item to be held by a Pok\u00e9mon. It extends the duration of the terrain caused by the holder's move or Ability.",
+        "slug": "terrainextender"
+    },
+    "throatspray": {
+        "name": "Throat Spray",
+        "effect": "Raises Sp. Atk when a Pok\u00e9mon uses a sound-based move.",
+        "slug": "throatspray"
+    },
+    "toxicorb": {
+        "name": "Toxic Orb",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle.",
+        "slug": "toxicorb"
+    },
+    "twistedspoon": {
+        "name": "TwistedSpoon",
+        "effect": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.",
+        "slug": "twistedspoon"
+    },
+    "utilityumbrella": {
+        "name": "Utility Umbrella",
+        "effect": "An item to be held by a Pok\u00e9mon. This sturdy umbrella protects the holder from the effects of weather.",
+        "slug": "utilityumbrella"
+    },
+    "watermemory": {
+        "name": "Water Memory",
+        "effect": "A memory disc that contains Water-type data. It changes the type of the holder if held by a certain species of Pok\u00e9mon.",
+        "slug": "watermemory"
+    },
+    "waveincense": {
+        "name": "Wave Incense",
+        "effect": "An item to be held by a Pok\u00e9mon. This incense has a curious aroma that boosts the power of Water-type moves.",
+        "slug": "waveincense"
+    },
+    "weaknesspolicy": {
+        "name": "Weakness Policy",
+        "effect": "An item to be held by a Pok\u00e9mon. Attack and Sp. Atk sharply increase if the holder is hit with a move it's weak to.",
+        "slug": "weaknesspolicy"
+    },
+    "whiteherb": {
+        "name": "White Herb",
+        "effect": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once.",
+        "slug": "whiteherb"
+    },
+    "widelens": {
+        "name": "Wide Lens",
+        "effect": "An item to be held by a Pok\u00e9mon. It's a magnifying lens that slightly boosts the accuracy of moves.",
+        "slug": "widelens"
+    },
+    "wiseglasses": {
+        "name": "Wise Glasses",
+        "effect": "An item to be held by a Pok\u00e9mon. This thick pair of glasses slightly boosts the power of special moves.",
+        "slug": "wiseglasses"
+    },
+    "zoomlens": {
+        "name": "Zoom Lens",
+        "effect": "An item to be held by a Pok\u00e9mon. If the holder moves after its target moves, its accuracy will be boosted.",
+        "slug": "zoomlens"
+    }
+}
