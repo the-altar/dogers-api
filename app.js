@@ -5,7 +5,9 @@ const port = process.env.PORT || 3000;
 
 // local in-memory data
 const localDex = {
-    ou: require("./data/gen8ou.json"),
+    tiers:{
+        ou: require("./data/gen8ou.json"),
+    },
     items: require("./data/itemdex.json"),
     moves: require("./data/movedex.json")
 }
@@ -14,23 +16,22 @@ server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
 server.use(cors())
 
-server.get("/:key/:slug", (req, res) => {
-    const itemSlug = req.params.slug
-    const key = req.params.key
-    if (key in localDex) {
-        if (itemSlug in localDex[key]) {
-            return res.json(localDex[key][itemSlug])
-        }
-    }
-    return res.json(false)
+server.get("/items", (req, res) => {
+    return res.json(localDex.items)
 })
 
-server.get("/:key", (req, res) => {
-    const key = req.params.key
-    if (key in localDex) {
-        return res.json(localDex[key])
-    }
-    return res.json(false)
+server.get("/items/:slug", (req, res) => {
+    const itemSlug = req.params.slug
+    return res.json(localDex.items[itemSlug])
+})
+
+server.get("/moves", (req, res) => {
+    return res.json(localDex.moves)
+})
+
+server.get("/moves/:slug", (req, res) => {
+    const moveSlug = req.params.slug
+    return res.json(localDex.moves[moveSlug])
 })
 
 server.get("/pokemon/:tier/:slug", (req, res) => {
@@ -51,9 +52,22 @@ server.get("/pokemon/:tier/:slug", (req, res) => {
 server.get("pokemon/:tier", (req, res) => {
     const tier = req.params.tier
     if (tier in localDex) {
-        return res.json({ dogars: localDex[tier][req.params.tier], status: 1 })
+        return res.json({ dogars: localDex[tier], status: 1 })
     }
     return res.json({ dogars: null, status: 0 })
+})
+
+server.get("/all/:tier", (req, res)=>{
+    const tier = req.params.tier
+
+    if (tier in localDex.tiers){
+        return res.json({
+            dex: localDex.tiers[tier],
+            items: localDex.items,
+            moves: localDex.moves
+        })
+    }
+    return res.json(false)
 })
 
 server.listen(port, () => console.log(`Express started at port: ${port}`));
