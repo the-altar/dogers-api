@@ -1,7 +1,7 @@
 const server = require('express')();
 const bodyParser = require('body-parser');
 const cors = require("cors")
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 // local in-memory data
 const localDex = {
@@ -38,12 +38,12 @@ server.get("/pokemon/:tier/:slug", (req, res) => {
     const tier = req.params.tier
 
     if (tier in localDex) {
-
         if (pkmn in localDex[tier]) {
             let pokemon = localDex[tier][pkmn]
             return res.json({ dogars: pokemon, status: 1 })
         }
     }
+
     return res.json({ dogars: false, status: 0 })
 
 })
