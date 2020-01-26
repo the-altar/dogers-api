@@ -38,9 +38,9 @@ server.get("/pokemon/:tier/:slug", (req, res) => {
     const pkmn = req.params.slug
     const tier = req.params.tier
 
-    if (tier in localDex) {
-        if (pkmn in localDex[tier]) {
-            let pokemon = localDex[tier][pkmn]
+    if (tier in localDex.tiers) {
+        if (pkmn in localDex.tiers[tier]) {
+            let pokemon = localDex.tiers[tier][pkmn]
             return res.json({ dogars: pokemon, status: 1 })
         }
     }
