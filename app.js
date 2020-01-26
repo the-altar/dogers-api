@@ -49,7 +49,7 @@ server.get("/pokemon/:tier/:slug", (req, res) => {
 
 })
 
-server.get("pokemon/:tier", (req, res) => {
+server.get("/pokemon/:tier", (req, res) => {
     const tier = req.params.tier
     if (tier in localDex.tiers) {
         return res.json({ dogars: localDex.tiers[tier], status: 1 })
