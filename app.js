@@ -51,23 +51,10 @@ server.get("/pokemon/:tier/:slug", (req, res) => {
 
 server.get("pokemon/:tier", (req, res) => {
     const tier = req.params.tier
-    if (tier in localDex) {
-        return res.json({ dogars: localDex[tier], status: 1 })
+    if (tier in localDex.tiers) {
+        return res.json({ dogars: localDex.tiers[tier], status: 1 })
     }
     return res.json({ dogars: null, status: 0 })
-})
-
-server.get("/all/:tier", (req, res)=>{
-    const tier = req.params.tier
-
-    if (tier in localDex.tiers){
-        return res.json({
-            dex: localDex.tiers[tier],
-            items: localDex.items,
-            moves: localDex.moves
-        })
-    }
-    return res.json(false)
 })
 
 server.listen(port, () => console.log(`Express started at port: ${port}`));
