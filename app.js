@@ -7,6 +7,9 @@ const port = process.env.PORT || 3000;
 const localDex = {
     tiers:{
         ou: require("./data/gen8ou.json"),
+        uu:require("./data/gen8uu.json"),
+        ubers:require("./data/gen8ubers.json"),
+        bss:require("./data/gen8battlestadium.json")
     },
     items: require("./data/itemdex.json"),
     moves: require("./data/movedex.json")
