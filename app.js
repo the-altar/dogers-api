@@ -60,4 +60,22 @@ server.get("/pokemon/:tier", (req, res) => {
     return res.json({ dogars: null, status: 0 })
 })
 
+server.get("/:tier/moves_and_items/:slug", (req,res)=>{
+    const tier = req.params.tier
+    const slug = req.params.slug
+
+    let moves = []
+    let items = []
+    for(let i in localDex.tiers[tier][slug].moves){
+        moves.push(localDex.moves[localDex.tiers[tier][slug].moves[i]])
+    }
+    for(let i in localDex.tiers[tier][slug].items){
+        items.push(localDex.items[localDex.tiers[tier][slug].items[i]])
+    }
+    return res.json({
+        moves: moves,
+        items: items
+    })
+})
+
 server.listen(port, () => console.log(`Express started at port: ${port}`));
