@@ -70,7 +70,11 @@ server.get("/:tier/moves_and_items/:slug", (req,res)=>{
         moves.push(localDex.moves[localDex.tiers[tier][slug].moves[i]])
     }
     for(let i in localDex.tiers[tier][slug].items){
-        items.push(localDex.items[localDex.tiers[tier][slug].items[i]])
+
+        const itemKey = localDex.tiers[tier][slug].items[i]
+        localDex.items[itemKey].show = false
+        
+        items.push(localDex.items[itemKey])
     }
     return res.json({
         moves: moves,
