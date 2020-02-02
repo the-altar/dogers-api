@@ -67,15 +67,22 @@ server.get("/:tier/moves_and_items/:slug", (req,res)=>{
     let moves = []
     let items = []
     for(let i in localDex.tiers[tier][slug].moves){
-        moves.push(localDex.moves[localDex.tiers[tier][slug].moves[i]])
+        localDex.moves[localDex.tiers[tier][slug].moves[i][0]].usage = localDex.tiers[tier][slug].moves[i][1]
+        moves.push(localDex.moves[localDex.tiers[tier][slug].moves[i][0]])
     }
+
     for(let i in localDex.tiers[tier][slug].items){
 
-        const itemKey = localDex.tiers[tier][slug].items[i]
-        localDex.items[itemKey].show = false
-        
-        items.push(localDex.items[itemKey])
+        const itemKey = localDex.tiers[tier][slug].items[i][0]
+        const usage = localDex.tiers[tier][slug].items[i][1]
+
+        if (itemKey in localDex.items){
+            localDex.items[itemKey].show = false
+            localDex.items[itemKey].usage = usage     
+            items.push(localDex.items[itemKey])
+        }
     }
+
     return res.json({
         moves: moves,
         items: items
