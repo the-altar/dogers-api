@@ -11,7 +11,8 @@ const localDex = {
         ru: require("./data/gen8ru.json"),
         vgc: require("./data/gen8vgc.json"),
         ubers:require("./data/gen8ubers.json"),
-        bss:require("./data/gen8battlestadium.json")
+        bss:require("./data/gen8battlestadium.json"),
+        monotype: require("./data/gen8monotype.json"),
     },
     items: require("./mundane/itemdex.json"),
     moves: require("./mundane/movedex.json")
