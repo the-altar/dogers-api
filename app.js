@@ -1,4 +1,5 @@
-const server = require('express')();
+const express = require('express')
+const server = express();
 const bodyParser = require('body-parser');
 const cors = require("cors")
 const port = process.env.PORT || 3000;
@@ -18,9 +19,15 @@ const localDex = {
     moves: require("./mundane/movedex.json")
 }
 //configurações publicas para dentro do servidor express, adicionando middlewares (body-parser,cors)
+server.use(express.static('public'))
 server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
 server.use(cors())
+
+
+server.get('/', (req, res)=>{
+    res.sendFile("public/index.html")
+})
 
 server.get("/items", (req, res) => {
     return res.json(localDex.items)
