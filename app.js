@@ -8,11 +8,13 @@ const localDex = {
     tiers:{
         ou: require("./data/gen8ou.json"),
         uu:require("./data/gen8uu.json"),
+        ru: require("./data/gen8ru.json"),
+        vgc: require("./data/gen8vgc.json"),
         ubers:require("./data/gen8ubers.json"),
         bss:require("./data/gen8battlestadium.json")
     },
-    items: require("./data/itemdex.json"),
-    moves: require("./data/movedex.json")
+    items: require("./mundane/itemdex.json"),
+    moves: require("./mundane/movedex.json")
 }
 //configurações publicas para dentro do servidor express, adicionando middlewares (body-parser,cors)
 server.use(bodyParser.urlencoded({ extended: false }))
