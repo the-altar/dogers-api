@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require("cors")
 const port = process.env.PORT || 3000;
 
-// local in-memory data
+// local, in-memory data
 const localDex = {
     tiers:{
         ou: require("./data/gen8ou.json"),
@@ -16,7 +16,8 @@ const localDex = {
         monotype: require("./data/gen8monotype.json"),
     },
     items: require("./mundane/itemdex.json"),
-    moves: require("./mundane/movedex.json")
+    moves: require("./mundane/movedex.json"),
+    abilities: require("./mundane/abilitydex.json")
 }
 //configurações publicas para dentro do servidor express, adicionando middlewares (body-parser,cors)
 server.use(express.static('public'))
@@ -27,6 +28,9 @@ server.use(cors())
 
 server.get('/', (req, res)=>{
     res.sendFile("public/index.html")
+})
+server.get("/bmt", (req, res)=>{
+    res.sendFile("./public/index.html", {root: __dirname})
 })
 
 server.get("/items", (req, res) => {
@@ -97,6 +101,19 @@ server.get("/:tier/moves_and_items/:slug", (req,res)=>{
         moves: moves,
         items: items
     })
+})
+
+server.post("/bmt", (req, res)=>{
+    for(let p in req.body){
+        let moves = []
+        for(let m in req.body[p].moves){
+            moves.push(localDex.moves[req.body[p].moves[m]])
+        } 
+        req.body[p].moves = moves
+        req.body[p].ability =  localDex.abilities[req.body[p].ability]
+        req.body[p].item = localDex.items[req.body[p].item]
+    }
+    return res.json(req.body) 
 })
 
 server.listen(port, () => console.log(`Express started at port: ${port}`));
