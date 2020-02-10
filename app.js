@@ -111,7 +111,13 @@ server.post("/bmt", (req, res)=>{
         } 
         req.body[p].moves = moves
         req.body[p].ability =  localDex.abilities[req.body[p].ability]
-        req.body[p].item = localDex.items[req.body[p].item]
+        
+        if(req.body[p].item === ""){
+            req.body[p].item = {name: "Nothing", slug:"empty"}
+        } else {
+            req.body[p].item = localDex.items[req.body[p].item]
+        }       
+        
     }
     return res.json(req.body) 
 })
