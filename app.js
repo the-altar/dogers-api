@@ -15,6 +15,7 @@ const localDex = {
         bss:require("./data/gen8battlestadium.json"),
         monotype: require("./data/gen8monotype.json"),
     },
+    alias: require("./data/aliases.json"),
     items: require("./mundane/itemdex.json"),
     moves: require("./mundane/movedex.json"),
     abilities: require("./mundane/abilitydex.json")
@@ -104,22 +105,42 @@ server.get("/:tier/moves_and_items/:slug", (req,res)=>{
 })
 
 server.post("/bmt", (req, res)=>{
-    for(let p in req.body){
+    let response = []
+    for(let p in req.body.pokemon){
+        let pokemon = {}
+
+        let pkmn = req.body.pokemon[p].name
+        if ( pkmn in localDex.alias ){
+            pkmn = localDex.alias[pkmn]
+        }
+
         let moves = []
-        for(let m in req.body[p].moves){
-            moves.push(localDex.moves[req.body[p].moves[m]])
+        for(let m in req.body.pokemon[p].moves){
+            moves.push(localDex.moves[req.body.pokemon[p].moves[m]])
         } 
-        req.body[p].moves = moves
-        req.body[p].ability =  localDex.abilities[req.body[p].ability]
         
-        if(req.body[p].item === ""){
-            req.body[p].item = {name: "Nothing", slug:"empty"}
+        let weak = {}
+        for(let w in localDex.tiers[req.body.tier][pkmn].weak){
+            weak[w] = localDex.tiers[req.body.tier][w]
+        }
+        
+        if(req.body.pokemon[p].item === ""){
+            pokemon.item = {name: "Nothing", slug:"nothing"}
         } else {
-            req.body[p].item = localDex.items[req.body[p].item]
-        }       
+            pokemon.item = localDex.items[req.body.pokemon[p].item]
+        }
         
+        pokemon.moves = moves
+        pokemon.ability =  localDex.abilities[req.body.pokemon[p].ability]
+        pokemon.data = localDex.tiers[req.body.tier][pkmn]
+        pokemon.data.weak =  weak
+        pokemon.spread = req.body.pokemon[p].spread
+        pokemon.nature = req.body.pokemon[p].nature
+        pokemon.level = req.body.pokemon[p].level
+        pokemon.data.slug = req.body.pokemon[p].name
+        response.push(pokemon)
     }
-    return res.json(req.body) 
+    return res.json(response) 
 })
 
 server.listen(port, () => console.log(`Express started at port: ${port}`));
