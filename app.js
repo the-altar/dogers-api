@@ -3,6 +3,7 @@ const server = express();
 const bodyParser = require('body-parser');
 const cors = require("cors")
 const port = process.env.PORT || 3000;
+const helpers = require("./helpers/helpers");
 
 // local, in-memory data
 const localDex = {
@@ -105,25 +106,27 @@ server.get("/:tier/moves_and_items/:slug", (req,res)=>{
 })
 
 server.post("/bmt", (req, res)=>{
-    let response = []
+    let response = { weak: {}, pokemon:[] }
+    if (req.body.pokemon[0].name=='') return
     for(let p in req.body.pokemon){
         let pokemon = {}
 
         let pkmn = req.body.pokemon[p].name
+
         if ( pkmn in localDex.alias ){
             pkmn = localDex.alias[pkmn]
+        }
+
+        for (w in localDex.tiers[req.body.tier][pkmn].weak){
+            if (w in response.weak) continue
+            else response.weak[w] = helpers(w, localDex.tiers[req.body.tier], localDex.moves)
         }
 
         let moves = []
         for(let m in req.body.pokemon[p].moves){
             moves.push(localDex.moves[req.body.pokemon[p].moves[m]])
         } 
-        
-        let weak = {}
-        for(let w in localDex.tiers[req.body.tier][pkmn].weak){
-            weak[w] = localDex.tiers[req.body.tier][w]
-        }
-        
+
         if(req.body.pokemon[p].item === ""){
             pokemon.item = {name: "Nothing", slug:"nothing"}
         } else {
@@ -133,13 +136,13 @@ server.post("/bmt", (req, res)=>{
         pokemon.moves = moves
         pokemon.ability =  localDex.abilities[req.body.pokemon[p].ability]
         pokemon.data = localDex.tiers[req.body.tier][pkmn]
-        pokemon.data.weak =  weak
         pokemon.spread = req.body.pokemon[p].spread
         pokemon.nature = req.body.pokemon[p].nature
         pokemon.level = req.body.pokemon[p].level
         pokemon.data.slug = req.body.pokemon[p].name
-        response.push(pokemon)
+        response.pokemon.push(pokemon)
     }
+
     return res.json(response) 
 })
 
