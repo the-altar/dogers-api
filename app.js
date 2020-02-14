@@ -117,33 +117,37 @@ server.post("/bmt", (req, res)=>{
             pkmn = localDex.alias[pkmn]
         }
 
-        for (w in localDex.tiers[req.body.tier][pkmn].weak){
-            if (w in response.weak) continue
-            else response.weak[w] = helpers(w, localDex.tiers[req.body.tier], localDex.moves)
-        }
-
-        let moves = []
-        for(let m in req.body.pokemon[p].moves){
-            moves.push(localDex.moves[req.body.pokemon[p].moves[m]])
-        } 
-
-        if(req.body.pokemon[p].item === ""){
-            pokemon.item = {name: "Nothing", slug:"nothing"}
+        if (pkmn in localDex.tiers[req.body.tier]){
+            for (w in localDex.tiers[req.body.tier][pkmn].weak){
+                if (w in response.weak) continue
+                else response.weak[w] = helpers(w, localDex.tiers[req.body.tier], localDex.moves)
+            }
+    
+            let moves = []
+            for(let m in req.body.pokemon[p].moves){
+                moves.push(localDex.moves[req.body.pokemon[p].moves[m]])
+            } 
+    
+            if(req.body.pokemon[p].item === ""){
+                pokemon.item = {name: "Nothing", slug:"nothing"}
+            } else {
+                pokemon.item = localDex.items[req.body.pokemon[p].item]
+            }
+            
+            pokemon.moves = moves
+            pokemon.ability =  localDex.abilities[req.body.pokemon[p].ability]
+            pokemon.data = localDex.tiers[req.body.tier][pkmn]
+            pokemon.spread = req.body.pokemon[p].spread
+            pokemon.nature = req.body.pokemon[p].nature
+            pokemon.level = req.body.pokemon[p].level
+            pokemon.data.slug = req.body.pokemon[p].name
+            response.pokemon.push(pokemon)
         } else {
-            pokemon.item = localDex.items[req.body.pokemon[p].item]
+            return res.json({sucess: false, message: "Pokemon not found", response:{}})
         }
         
-        pokemon.moves = moves
-        pokemon.ability =  localDex.abilities[req.body.pokemon[p].ability]
-        pokemon.data = localDex.tiers[req.body.tier][pkmn]
-        pokemon.spread = req.body.pokemon[p].spread
-        pokemon.nature = req.body.pokemon[p].nature
-        pokemon.level = req.body.pokemon[p].level
-        pokemon.data.slug = req.body.pokemon[p].name
-        response.pokemon.push(pokemon)
     }
-
-    return res.json(response) 
+    return res.json({sucess: true, message: "Success!", response: response}) 
 })
 
 server.listen(port, () => console.log(`Express started at port: ${port}`));
