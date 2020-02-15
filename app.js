@@ -140,7 +140,7 @@ server.post("/bmt", (req, res)=>{
             pokemon.spread = req.body.pokemon[p].spread
             pokemon.nature = req.body.pokemon[p].nature
             pokemon.level = req.body.pokemon[p].level
-            pokemon.data.slug = req.body.pokemon[p].name
+            pokemon.alias = req.body.pokemon[p].name
             response.pokemon.push(pokemon)
         } else {
             return res.json({sucess: false, message: "Pokemon not found", response:{}})
