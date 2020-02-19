@@ -2,7 +2,7 @@ const express = require('express')
 const server = express();
 const bodyParser = require('body-parser');
 const cors = require("cors")
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 const helpers = require("./helpers/helpers");
 
 // local, in-memory data
