@@ -113,7 +113,7 @@ server.post("/bmt", (req, res) => {
             response.pokemon.push(pokemon)
 
         } else {
-            return res.json({ sucess: false, message: "Pokemon not found", response: {} })
+            return res.json({ sucess: false, message: `${pkmn} wasn't found in the tier`, response: {} })
         }
 
     }
