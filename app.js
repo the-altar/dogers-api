@@ -77,6 +77,7 @@ server.post("/bmt", (req, res) => {
         let pokemon = {}
 
         let pkmn = req.body.pokemon[p].name
+        
         if (pkmn in localDex.alias) {
             pkmn = localDex.alias[pkmn]
         }
