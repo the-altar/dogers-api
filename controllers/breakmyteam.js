@@ -7,27 +7,27 @@ exports.breakmyteamPage = (req, res) => {
 }
 
 exports.uploadTeam = (req, res) => {
-    Team.create(req.body, function(err, savedDoc){
-        if(err) return res.json({message: "failed", code: 0})
-        return res.json({message: `/breakmyteam/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1})
+    Team.create(req.body, function (err, savedDoc) {
+        if (err) return res.json({ message: "failed", code: 0 })
+        return res.json({ message: `/breakmyteam/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
     })
 }
 
 exports.findTeam = (req, res) => {
-    Team.findById(req.body.id, function(err, data){
-        if (err) return res.json({code:0, message: "failed"})
-        return res.json({code: 1, message: "success!", team: data})
+    Team.findById(req.body.id, function (err, data) {
+        if (err) return res.json({ code: 0, message: "failed" })
+        return res.json({ code: 1, message: "success!", team: data })
     })
-} 
+}
 
 exports.shareMyTeam = (req, res) => {
     res.sendFile("index.html", { root: './public' })
-} 
+}
 
 
 exports.retrieveTeam = (req, res) => {
     let response = { weak: {}, pokemon: [], raw: '' }
-    
+
     if (req.body.pokemon[0] === undefined || req.body.pokemon[0].name === '') return
     for (let p in req.body.pokemon) {
         let pokemon = {}
@@ -51,7 +51,7 @@ exports.retrieveTeam = (req, res) => {
             let moves = []
             for (let m in req.body.pokemon[p].moves) {
                 const moveKey = req.body.pokemon[p].moves[m]
-                if (moveKey in dex.moves){
+                if (moveKey in dex.moves) {
                     moves.push(dex.moves[moveKey])
                 } else {
                     return res.json({ sucess: false, message: `There's something wrong with ${pkmn}`, response: {} })
@@ -78,7 +78,20 @@ exports.retrieveTeam = (req, res) => {
         }
 
     }
-    response.tier = req.body.tier.alias 
+    response.tier = req.body.tier.alias
     response.raw = req.body.raw
     return res.json({ sucess: true, message: "Success!", response: response })
 }
+
+exports.retrieveAllKeysFromTier = (req, res) => {
+    const tier = req.params.tier
+    if (tier in dex.tiers) {
+        return res.json({
+            code: 1,
+            keys: Object.keys(dex.tiers[tier])
+        })
+    } else {
+        return
+    }
+
+} 
