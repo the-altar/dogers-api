@@ -37,7 +37,9 @@ exports.retrieveTeam = (req, res) => {
         }
 
         if (pkmn in dex.tiers[req.body.tier.alias]) {
-            methods.findPokemonByKey(dex.tiers[req.body.tier.alias][pkmn].weak, dex.tiers[req.body.tier.alias], req.body.tier.defaultLevel, req.body.tier.alias, response.weak)
+            keys = Object.keys(dex.tiers[req.body.tier.alias][pkmn].weak)
+            
+            methods.findPokemonByKey(keys, dex.tiers[req.body.tier.alias], req.body.tier.defaultLevel, req.body.tier.alias, response.weak)
 
             let moves = []
             for (let m in req.body.pokemon[p].moves) {
