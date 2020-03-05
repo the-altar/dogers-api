@@ -24,10 +24,8 @@ exports.shareMyTeam = (req, res) => {
     res.sendFile("index.html", { root: './public' })
 }
 
-
 exports.retrieveTeam = (req, res) => {
     let response = { weak: {}, pokemon: [], raw: '' }
-
     if (req.body.pokemon[0] === undefined || req.body.pokemon[0].name === '') return
     for (let p in req.body.pokemon) {
         let pokemon = {}
@@ -39,14 +37,7 @@ exports.retrieveTeam = (req, res) => {
         }
 
         if (pkmn in dex.tiers[req.body.tier.alias]) {
-            for (w in dex.tiers[req.body.tier.alias][pkmn].weak) {
-                if (w in response.weak) continue
-                else {
-                    response.weak[w] = methods.findPokemon(w, dex.tiers[req.body.tier.alias])
-                    response.weak[w].level = req.body.tier.defaultLevel
-                    response.weak[w].tier = req.body.tier.alias
-                }
-            }
+            methods.findPokemonByKey(dex.tiers[req.body.tier.alias][pkmn].weak, dex.tiers[req.body.tier.alias], req.body.tier.defaultLevel, req.body.tier.alias, response.weak)
 
             let moves = []
             for (let m in req.body.pokemon[p].moves) {
@@ -95,3 +86,13 @@ exports.retrieveAllKeysFromTier = (req, res) => {
     }
 
 } 
+
+exports.retrievePokemonWithKeys = (req, res)=> {
+    const keys = req.body.keys
+    const tier = req.body.tier
+    let pokemon = {}
+    methods.findPokemonByKey(keys, dex.tiers[tier], req.body.level, tier, pokemon)
+    return res.json({
+        pokemon: pokemon
+    })
+}

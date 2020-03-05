@@ -8,4 +8,5 @@ module.exports = function(app) {
     app.post("/breakmyteam", bmtController.retrieveTeam)
     app.post("/breakmyteam/shared", bmtController.findTeam)
     app.post("/breakmyteam/upload", bmtController.uploadTeam)
+    app.post('/breakmyteam/retrieve', bmtController.retrievePokemonWithKeys)
 }
