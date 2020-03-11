@@ -79,10 +79,20 @@ exports.retrieveTeam = (req, res) => {
 exports.retrieveAllKeysFromTier = (req, res) => {
     const tier = req.params.tier
     if (tier in dex.tiers) {
+        let keys = []
+        Object.keys(dex.tiers[tier]).forEach(e => {
+            const el = {
+                value: e, 
+                selected: false
+            }
+            keys.push(el)
+        })
+
         return res.json({
             code: 1,
-            keys: Object.keys(dex.tiers[tier])
+            keys: keys
         })
+        
     } else {
         return
     }
