@@ -3,7 +3,7 @@ const methods = require("../methods");
 const Team = require("../models/index").teamModel
 
 exports.breakmyteamPage = (req, res) => {
-    res.sendFile("index.html", { root: './public' })
+    res.sendFile("index.html", { root: './public/vue-page' })
 }
 
 exports.uploadTeam = (req, res) => {
@@ -21,7 +21,7 @@ exports.findTeam = (req, res) => {
 }
 
 exports.shareMyTeam = (req, res) => {
-    res.sendFile("index.html", { root: './public' })
+    res.sendFile("index.html", { root: './public/vue-page' })
 }
 
 exports.retrieveTeam = (req, res) => {

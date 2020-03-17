@@ -27,7 +27,7 @@ exports.pokemonPage = (req, res) => {
 
     if (tier in dex.tiers) {
         if (pkmn in dex.tiers[tier]) {
-            return res.sendFile('index.html', { root: './public' });
+            return res.sendFile('index.html', { root: './public/vue-page' });
         }
     }
 
