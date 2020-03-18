@@ -15,8 +15,16 @@ exports.findPokemon = (req, res) => {
 
 exports.collectFromTier = (req, res) => {
     const tier = req.params.tier
+    const arr = []
     if (tier in dex.tiers) {
-        return res.json({ pokemon: dex.tiers[tier], status: 1 })
+        for(pkmn in dex.tiers[tier]){
+            arr.push({
+                slug: dex.tiers[tier][pkmn].slug,
+                types: dex.tiers[tier][pkmn].types,
+                url: false
+            })
+        } 
+        return res.json({ pokemon: arr, status: 1 })
     }
     return res.json({ pokemon: null, status: 0 })
 }

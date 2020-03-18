@@ -17,7 +17,6 @@ const findPokemon = function (pokemon, pokedex){
         slug: pkmn.slug
     }
 }
-
 exports.findPokemon = findPokemon
 
 exports.findPokemonByKey = function(keys, pokedex, lvl, tier, found){
