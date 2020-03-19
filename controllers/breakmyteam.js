@@ -9,7 +9,7 @@ exports.breakmyteamPage = (req, res) => {
 exports.uploadTeam = (req, res) => {
     Team.create(req.body, function (err, savedDoc) {
         if (err) return res.json({ message: "failed", code: 0 })
-        return res.json({ message: `/breakmyteam/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
+        return res.json({ message: `/mysquad/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
     })
 }
 
