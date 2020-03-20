@@ -11,6 +11,7 @@ module.exports.dex = {
         ru: require("./data/ru.json"),
         vgc: require("./data/vgc.json"),
         ubers: require("./data/ubers.json"),
+        nu: require('./data/nu.json'),
         bss: require("./data/bss.json"),
         monotype: require("./data/monotype.json"),
         lc: require("./data/lc.json"),
