@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const TeamSchema = Schema({
   tier: {type: String },
-  raw: {type: String}  
+  raw: {type: String},
+  teamMembers: [{name: String}]  
 });
 
 module.exports = mongoose.model('Team', TeamSchema);

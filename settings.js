@@ -2,6 +2,7 @@ const bodyParser = require('body-parser');
 const cors = require("cors")
 const express = require('express')
 
+
 // local, in-memory data
 module.exports.dex = {
     tiers: {
@@ -12,6 +13,8 @@ module.exports.dex = {
         ubers: require("./data/ubers.json"),
         bss: require("./data/bss.json"),
         monotype: require("./data/monotype.json"),
+        lc: require("./data/lc.json"),
+        nfe: require('./data/nfe.json')
     },
     alias: require("./data/aliases.json"),
     abilities: require("./data/abilitydex.json"),
