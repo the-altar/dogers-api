@@ -8,8 +8,8 @@ exports.breakmyteamPage = (req, res) => {
 
 exports.uploadTeam = (req, res) => {
     Team.create(req.body, function (err, savedDoc) {
-        if (err) return res.json({ message: "failed", code: 0 })
-        return res.json({ message: `/mysquad/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
+        if (err) return res.json({ path: "failed", code: 0 })
+        return res.json({ path: `/mysquad/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
     })
 }
 
@@ -37,9 +37,6 @@ exports.retrieveTeam = (req, res) => {
         }
 
         if (pkmn in dex.tiers[req.body.tier.alias]) {
-            keys = Object.keys(dex.tiers[req.body.tier.alias][pkmn].weak)
-            
-            methods.findPokemonByKey(keys, dex.tiers[req.body.tier.alias], req.body.tier.defaultLevel, req.body.tier.alias, response.weak)
 
             let moves = []
             for (let m in req.body.pokemon[p].moves) {
@@ -57,15 +54,25 @@ exports.retrieveTeam = (req, res) => {
                 pokemon.item = dex.items[req.body.pokemon[p].item]
             }
 
-            pokemon.moves = moves
-            pokemon.ability = dex.abilities[req.body.pokemon[p].ability]
-            pokemon.data = dex.tiers[req.body.tier.alias][pkmn]
-            pokemon.spread = req.body.pokemon[p].spread
-            pokemon.nature = req.body.pokemon[p].nature
-            pokemon.level = req.body.pokemon[p].level
-            pokemon.alias = req.body.pokemon[p].name
-            response.pokemon.push(pokemon)
+            pokemon.data = {}
+            pokemon.data.slug = dex.tiers[req.body.tier.alias][pkmn].slug
 
+            if (req.body.getData) {
+
+                let keys = Object.keys(dex.tiers[req.body.tier.alias][pkmn].weak)
+                methods.findPokemonByKey(keys, dex.tiers[req.body.tier.alias], req.body.tier.defaultLevel, req.body.tier.alias, response.weak)
+
+                pokemon.data = dex.tiers[req.body.tier.alias][pkmn]
+                pokemon.moves = moves
+                pokemon.ability = dex.abilities[req.body.pokemon[p].ability]
+                pokemon.spread = req.body.pokemon[p].spread
+                pokemon.nature = req.body.pokemon[p].nature
+                pokemon.level = req.body.pokemon[p].level
+                pokemon.alias = req.body.pokemon[p].name
+
+            }
+
+            response.pokemon.push(pokemon)
         } else {
             return res.json({ sucess: false, message: `${pkmn} wasn't found in the tier`, response: {} })
         }
@@ -82,7 +89,7 @@ exports.retrieveAllKeysFromTier = (req, res) => {
         let keys = []
         Object.keys(dex.tiers[tier]).forEach(e => {
             const el = {
-                value: e, 
+                value: e,
                 selected: false
             }
             keys.push(el)
@@ -92,19 +99,28 @@ exports.retrieveAllKeysFromTier = (req, res) => {
             code: 1,
             keys: keys
         })
-        
+
     } else {
         return
     }
 
-} 
+}
 
-exports.retrievePokemonWithKeys = (req, res)=> {
+exports.retrievePokemonWithKeys = (req, res) => {
     const keys = req.body.keys
     const tier = req.body.tier
     let pokemon = {}
     methods.findPokemonByKey(keys, dex.tiers[tier], req.body.level, tier, pokemon)
     return res.json({
         pokemon: pokemon
+    })
+}
+
+exports.getLatestEntries = (req, res) => {
+    Team.find().sort({ _id: -1 }).limit(200).exec((err, docs) => {
+        if (err) {
+            return res.json({ code: 0 })
+        }
+        return res.json({ code: 1, teams: docs })
     })
 }

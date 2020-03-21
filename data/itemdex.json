@@ -923,5 +923,10 @@
         "name": "Zoom Lens",
         "effect": "An item to be held by a Pok\u00e9mon. If the holder moves after its target moves, its accuracy will be boosted.",
         "slug": "zoomlens"
+    },
+    "berryjuice":{
+        "name": "Berry Juice",
+        "effect": "A 100 percent pure juice made of Berries. When consumed, it restores 20 HP to an injured Pokémon.",
+        "slug": "berryjuice"
     }
 }
