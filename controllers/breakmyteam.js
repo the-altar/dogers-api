@@ -117,7 +117,7 @@ exports.retrievePokemonWithKeys = (req, res) => {
 }
 
 exports.getLatestEntries = (req, res) => {
-    Team.find().sort({ _id: -1 }).limit(200).exec((err, docs) => {
+    Team.find().sort({ _id: -1 }).limit(15).exec((err, docs) => {
         if (err) {
             return res.json({ code: 0 })
         }
