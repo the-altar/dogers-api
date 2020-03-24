@@ -4,5 +4,4 @@
 const Team = require("./blog/Team")
 
 // Exports
-
 exports.teamModel = Team
