@@ -9,7 +9,7 @@ exports.breakmyteamPage = (req, res) => {
 exports.uploadTeam = (req, res) => {
     Team.create(req.body, function (err, savedDoc) {
         if (err) return res.json({ path: "failed", code: 0 })
-        return res.json({ path: `/mysquad/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
+        return res.json({id:savedDoc._id, path: `/mysquad/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
     })
 }
 
@@ -124,3 +124,17 @@ exports.getLatestEntries = (req, res) => {
         return res.json({ code: 1, teams: docs })
     })
 }
+
+exports.getMyUploads = (req, res) => {
+    const ids = req.body
+    Team.find()
+        .where('_id')
+        .in(ids)
+        .exec(function(err, records){
+            if(err){
+                console.log(err)
+                return res.json({code: 0})
+            }
+            return res.json(records)
+        })
+} 

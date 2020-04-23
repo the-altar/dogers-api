@@ -5,6 +5,7 @@ module.exports = function(app) {
     app.get("/mysquad/:tier", bmtController.retrieveAllKeysFromTier)
     app.get("/mysquad/shared/:tier/:id", bmtController.shareMyTeam)
 
+    app.post("/mysquad/myuploads", bmtController.getMyUploads)
     app.post("/mysquad", bmtController.retrieveTeam)
     app.post("/mysquad/shared", bmtController.findTeam)
     app.post("/mysquad/shared/latest", bmtController.getLatestEntries)
