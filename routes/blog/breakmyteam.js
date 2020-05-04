@@ -10,5 +10,6 @@ module.exports = function(app) {
     app.post("/mysquad/shared", bmtController.findTeam)
     app.post("/mysquad/shared/latest", bmtController.getLatestEntries)
     app.post("/mysquad/upload", bmtController.uploadTeam)
+    app.post("/mysquad/update", bmtController.updateUploaded);
     app.post('/mysquad/retrieve', bmtController.retrievePokemonWithKeys)
 }

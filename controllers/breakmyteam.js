@@ -7,6 +7,7 @@ exports.breakmyteamPage = (req, res) => {
 }
 
 exports.uploadTeam = (req, res) => {
+    console.log(req.body)
     Team.create(req.body, function (err, savedDoc) {
         if (err) return res.json({ path: "failed", code: 0 })
         return res.json({id:savedDoc._id, path: `/mysquad/shared/${savedDoc.tier}/${savedDoc._id}`, code: 1 })
@@ -138,3 +139,14 @@ exports.getMyUploads = (req, res) => {
             return res.json(records)
         })
 } 
+
+exports.updateUploaded = (req,res)=>{
+    Team.findOneAndUpdate({_id: req.body._id}, req.body, {}, (err, doc)=>{
+        if(err){
+            return res.json({code: false})
+        }
+        console.log("records were updated!")
+        return res.json({code: true})
+    })
+}  
+
