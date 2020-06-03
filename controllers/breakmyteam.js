@@ -85,6 +85,8 @@ exports.retrieveTeam = (req, res) => {
 }
 
 exports.retrieveAllKeysFromTier = (req, res) => {
+    res.set('Cache-Control', 'public, max-age=2592000, s-maxage=2592000'); // 1 month
+    
     const tier = req.params.tier
     if (tier in dex.tiers) {
         let keys = []
@@ -108,6 +110,8 @@ exports.retrieveAllKeysFromTier = (req, res) => {
 }
 
 exports.retrievePokemonWithKeys = (req, res) => {
+    res.set('Cache-Control', 'public, max-age=2592000, s-maxage=2592000'); // 1 month
+    
     const keys = req.body.keys
     const tier = req.body.tier
     let pokemon = {}

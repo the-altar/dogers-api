@@ -26,8 +26,8 @@ module.exports.dex = {
 module.exports.router = function(){
     let app = express()    
     //configurações publicas para dentro do servidor express, adicionando middlewares (body-parser,cors)
-    app.use(express.static('public', {maxAge: '1m'}))
-    app.use(express.static('public/vue-page', {maxAge: '1m'}))
+    app.use(express.static('public', {maxAge: '30 days'}))
+    app.use(express.static('public/vue-page', {maxAge: '30 days'}))
     app.use(bodyParser.urlencoded({ extended: false }))
     app.use(bodyParser.json())
     app.use(cors())
