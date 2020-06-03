@@ -150,3 +150,7 @@ exports.updateUploaded = (req,res)=>{
     })
 }  
 
+exports.remove = (req, res)=>{
+    Team.deleteOne(req.body).exec()
+    return res.json({sucess: true})
+}
