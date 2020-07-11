@@ -3,8 +3,8 @@ const dex = require("../settings").dex
 exports.findPokemon = (req, res) => {
     res.set('Cache-Control', 'public, max-age=2592000, s-maxage=2592000'); // 1 month
     
-    const pkmn = req.body.pokemon
-    const tier = req.body.tier
+    const pkmn = req.params.pokemon
+    const tier = req.params.tier
 
     if (tier in dex.tiers) {
         if (pkmn in dex.tiers[tier]) {
