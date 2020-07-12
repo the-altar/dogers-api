@@ -9,6 +9,7 @@ module.exports.dex = {
         ou: require("./data/ou.json"),
         uu: require("./data/uu.json"),
         ru: require("./data/ru.json"),
+        pu: require("./data/pu.json"),
         vgc: require("./data/vgc.json"),
         ubers: require("./data/ubers.json"),
         nu: require('./data/nu.json'),
