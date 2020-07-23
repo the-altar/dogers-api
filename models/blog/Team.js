@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 const TeamSchema = Schema({
   tier: {type: String },
+  trainer: {type: Number},
   raw: {type: String},
   teamMembers: [{name: String}]  
 });

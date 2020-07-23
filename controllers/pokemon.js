@@ -31,7 +31,6 @@ exports.collectFromTier = (req, res) => {
         } 
         return res.json({ pokemon: arr, status: 1 })
     }
-    console.log(arr)
     return res.json({ pokemon: null, status: 0 })
 }
 
