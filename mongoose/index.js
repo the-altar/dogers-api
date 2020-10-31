@@ -5,7 +5,7 @@ const mongoUri = process.env.MONGODB_URI
 const mongoose = require('mongoose')
 
 // app will start running AFTER the connection to the database has been established
-module.exports = function(callback) {
+module.exports = function (callback) {
     mongoose.connect(mongoUri, {
         useUnifiedTopology: true,
         useNewUrlParser: true,
